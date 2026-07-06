@@ -1,10 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { ArrowRight } from 'lucide-react'
-import { getBookCallPath, scheduleBookCallScroll } from '@/lib/book-call'
+import { getBookCallPath, navigateToBookCall } from '@/lib/book-call'
 
 type PlusButtonProps = {
   children: React.ReactNode
@@ -24,7 +24,6 @@ export function PlusButton({
   bookCall,
 }: PlusButtonProps) {
   const pathname = usePathname()
-  const router = useRouter()
   const resolvedHref = bookCall ? getBookCallPath(pathname) : href
   const isExternal =
     !bookCall && (external || href.startsWith('http') || href.startsWith('mailto:'))
@@ -70,15 +69,8 @@ export function PlusButton({
   )
 
   function handleBookCallClick(e: React.MouseEvent<HTMLAnchorElement>) {
-    if (pathname === '/' || pathname === '/contact') {
-      e.preventDefault()
-      window.history.replaceState(null, '', resolvedHref)
-      scheduleBookCallScroll()
-    } else if (resolvedHref.startsWith('/#')) {
-      e.preventDefault()
-      router.push(resolvedHref)
-      setTimeout(() => scheduleBookCallScroll(), 200)
-    }
+    e.preventDefault()
+    navigateToBookCall(pathname)
   }
 
   if (isExternal) {

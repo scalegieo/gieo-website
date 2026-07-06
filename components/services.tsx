@@ -1,8 +1,7 @@
 'use client'
 
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
+import { PlusButton } from '@/components/plus-button'
 import { cn } from '@/lib/utils'
 
 const tiers = [
@@ -108,14 +107,9 @@ export function Services() {
                   ))}
                 </ul>
 
-                <Link
-                  href="/services"
-                  data-cursor="hover"
-                  className="mt-8 inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.18em] text-gold transition-opacity hover:opacity-70 md:opacity-70 md:group-hover:opacity-100"
-                >
-                  Explore {tier.name}
-                  <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-                </Link>
+                <PlusButton bookCall variant={tier.featured ? 'solid' : 'outline'} className="mt-8">
+                  Book a 30 Min Call
+                </PlusButton>
               </div>
             </Reveal>
           ))}

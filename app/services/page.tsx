@@ -358,13 +358,20 @@ export default function ServicesPage() {
                   </ul>
                   <div className="mt-8">
                     <PlusButton bookCall variant={tier.featured ? 'solid' : 'outline'}>
-                      {tier.featured ? 'Book a 30 Min Call' : 'Get a Quote'}
+                      Book a 30 Min Call
                     </PlusButton>
                   </div>
                 </div>
               </Reveal>
             ))}
           </div>
+          <Reveal delay={0.2}>
+            <div className="mt-12 flex justify-center">
+              <PlusButton bookCall variant="solid">
+                Book a 30 Min Call
+              </PlusButton>
+            </div>
+          </Reveal>
         </div>
       </section>
 

@@ -59,3 +59,16 @@ export function getBookCallPath(pathname: string) {
   }
   return `/#${BOOK_CALL_SECTION_ID}`
 }
+
+/** Reliable book-call navigation from any page (scrolls to Calendly on home). */
+export function navigateToBookCall(pathname: string) {
+  const href = getBookCallPath(pathname)
+
+  if (pathname === '/' || pathname === '/contact') {
+    window.history.replaceState(null, '', href)
+    scheduleBookCallScroll()
+    return
+  }
+
+  window.location.href = href
+}
