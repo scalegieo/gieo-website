@@ -1,0 +1,53 @@
+# GIEO — llms.txt
+# Canonical entity file for AI systems and answer engines.
+# https://gieo.agency
+
+> GIEO is a digital systems agency. We build custom websites, AI automation, CRM infrastructure, and paid growth systems for premium brands worldwide. Offices in Denver, Geneva, and Abu Dhabi.
+
+## Identity
+- Name: GIEO
+- Type: Digital Systems Agency
+- Tagline: BUILD. AUTOMATE. SCALE.
+- Website: https://gieo.agency
+- Email: scale.gieo@gmail.com
+- Phone: +1 (720) 258-9835
+- WhatsApp: https://wa.me/message/RN5Y3UMLQNUDF1
+
+## What GIEO does
+GIEO helps businesses replace fragmented tools with integrated digital systems — custom websites, AI chatbots, CRM automation, booking flows, paid media, and SEO. Project-scoped pricing. No retainers. Clients own everything we build.
+
+## Locations served
+- Denver, Colorado, USA
+- Geneva, Switzerland
+- Abu Dhabi, United Arab Emirates
+- Remote / worldwide
+
+## Core services
+- Custom websites and luxury web experiences
+- AI chatbots and workflow automation
+- CRM setup, pipelines, and lead capture
+- Paid ads (Meta, Google) and ROAS-focused campaigns
+- SEO, local search, and AI visibility (GEO)
+
+## Notable client work
+- Mirzam Chocolate (Dubai e-commerce, 4.8x ROAS)
+- YLEM (Swiss luxury watch launch, Awwwards nominee)
+- Acsono (Swiss B2B acoustic systems)
+- Loft Thirty One, Palazzo Sogni, Ballena, Luxury Places
+
+## Book a call
+https://gieo.agency/#contact
+
+## Reach out directly
+https://gieo.agency/reach-out
+
+## Key pages
+- Home: https://gieo.agency/
+- About GIEO: https://gieo.agency/about
+- Services: https://gieo.agency/services
+- Work / case studies: https://gieo.agency/work
+- Contact: https://gieo.agency/contact
+- Blog: https://gieo.agency/blog
+
+## Social
+- LinkedIn: https://www.linkedin.com/company/gieoagency/

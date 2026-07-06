@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+@import 'lenis/dist/lenis.css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* ── GIEO × Heco Partners Editorial Theme ── */
+
+@theme inline {
+  --font-sans: var(--font-space-grotesk), 'Space Grotesk Fallback', ui-sans-serif, sans-serif;
+  --font-heading: var(--font-instrument-serif), 'Instrument Serif Fallback', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-dark: var(--surface-dark);
+  --color-ghost: var(--ghost);
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 2);
+
+  --ease-heco: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+:root {
+  color-scheme: light;
+
+  /* Heco-style light editorial */
+  --background: #E8E6E1;
+  --foreground: #111111;
+
+  --surface-1: #E0DED8;
+  --surface-2: #D4D2CC;
+  --surface-dark: #141414;
+  --ghost: rgba(17, 17, 17, 0.12);
+
+  --card: #F0EEEA;
+  --card-foreground: #111111;
+  --popover: #F0EEEA;
+  --popover-foreground: #111111;
+
+  --primary: #111111;
+  --primary-foreground: #F0EEEA;
+  --secondary: #D4D2CC;
+  --secondary-foreground: #111111;
+
+  --muted: #D4D2CC;
+  --muted-foreground: rgba(17, 17, 17, 0.45);
+
+  --accent: #111111;
+  --accent-foreground: #F0EEEA;
+  --gold: #111111;
+  --gold-hover: rgba(17, 17, 17, 0.7);
+
+  --destructive: #B04040;
+  --border: rgba(17, 17, 17, 0.12);
+  --input: rgba(17, 17, 17, 0.08);
+  --ring: #111111;
+
+  --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: none;
+  }
+
+  @media (max-width: 767px) {
+    body {
+      cursor: auto;
+    }
+  }
+
+  ::selection {
+    background: #111111;
+    color: #F0EEEA;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(17, 17, 17, 0.2);
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .ease-heco {
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .text-ghost {
+    color: var(--ghost);
+  }
+  .label-caps {
+    @apply text-[10px] uppercase tracking-[0.2em];
+  }
+  .marquee-track {
+    animation: marquee 40s linear infinite;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  /* Calendly: hide floating badge + reduce visible branding chrome */
+  .calendly-badge-widget,
+  .calendly-overlay .calendly-popup-close {
+    display: none !important;
+  }
+  .calendly-embed-dark .calendly-inline-widget,
+  .calendly-embed-dark iframe {
+    border-radius: 1rem !important;
+  }
+  .calendly-embed-dark .calendly-spinner {
+    border-color: #d4af37 !important;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
