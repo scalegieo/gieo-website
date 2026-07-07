@@ -9,8 +9,8 @@ export default function manifest(): MetadataRoute.Manifest {
       'GIEO builds custom websites, AI automation, CRM systems, and growth infrastructure for premium brands.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#121212',
-    theme_color: '#121212',
+    background_color: '#E8E6E1',
+    theme_color: '#E8E6E1',
     icons: [
       {
         src: '/icon.png',
